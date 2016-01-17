@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to rooms_path
+      redirect_to validation_path
     else
       render :new
     end
